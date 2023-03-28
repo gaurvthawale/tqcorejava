@@ -1,6 +1,6 @@
 package com.practice;
 
-import java.lang.reflect.Array;
+
 import java.util.ArrayList;
 
 public class StudentTest {
@@ -8,13 +8,32 @@ public class StudentTest {
 	public static void commonElements(ArrayList<Student> a1,ArrayList<Student> a2)
 	{
 		ArrayList<Student> a = new ArrayList<>();
+		boolean status;
 		
-		for(int i=0;i<a1.size();i++)
+		a.addAll(a1);
+		
+		
+		
+		for(int i=0;i<a2.size();i++)
 		{
+			status=false;
 			
-			boolean status = a.contains(a1.get(i));
-			System.out.println();
+			
+			for(int j=0;j<a1.size();j++)
+			{
 				
+				if(a2.get(i).getName().equals(a1.get(j).getName()))
+				{
+					//a.add(a1.get(i));
+					status=true;
+					
+				}
+			}
+			if(status==false)
+			{
+				a.add(a2.get(i));
+			}
+			
 		}
 		
 		for(Student s : a)
