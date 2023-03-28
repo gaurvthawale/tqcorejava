@@ -1,0 +1,15 @@
+package com.employee;
+
+public class Test {
+
+	public static void main(String[] args) {
+		
+		Student s1 = new Student("gaurav","male",43,1,"electrical");
+		
+		System.out.println(s1);
+		
+		
+
+	}
+
+}
